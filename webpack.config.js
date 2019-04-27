@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const config = {
   entry: './src/index.js',
@@ -14,9 +15,10 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/index.pug'
     }),
+    new ExtractTextPlugin("style.css"),
   ],
   module: {
-    rules: [
+    rules: [      
       { 
         test: /\.pug$/,
         loader: 'pug-loader',
@@ -24,8 +26,28 @@ const config = {
             pretty: true
         }
       },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [
+            {
+              loader: "css-loader"
+            },
+            {
+              loader: "sass-loader"
+            }            
+          ]
+        })
+      },      
     ]
   }   
 };
 
-module.exports = config;
+module.exports = (env, options) => {
+  let production = options.mode ==='production';
+
+  config.devtool = production ? 'source-map' : 'eval-sourcemap';
+
+  return config;
+};
