@@ -8,15 +8,16 @@
 body {
   max-width: 1440px;
   margin: 0 auto;
-  font-family: 'Montserrat', sans-serif;
-  color: aqua; }
+  font-family: 'Montserrat', sans-serif; }
 
 .wrap {
-  max-width: 1160px;
+  max-width: 1200px;
+  padding: 0 20px;
   margin: 0 auto; }
 
-h1 {
-  color: red; }
+a {
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5); }
 
 .header {
   min-height: 70px;
@@ -24,12 +25,6 @@ h1 {
   grid-template-columns: 1fr 4fr 87px 1fr;
   grid-template-areas: "logo navigation login sign";
   grid-gap: 0 20px;
-  align-items: center; }
-
-.header-logo {
-  grid-area: logo;
-  justify-self: start;
-  display: flex;
   align-items: center; }
 
 .header-nav {
@@ -66,17 +61,139 @@ h1 {
   background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   background-origin: border-box; }
 
-.header-logo__name {
-  margin-left: 12.5px; }
-
 .header-nav__link {
-  color: #1F2041;
-  text-decoration: none;
   margin-right: 20px; }
   .header-nav__link:last-child {
     margin: 0; }
   .header-nav__link_dropdown::after {
     content: url("/img/arrow-down.svg");
     margin-left: 5px; }
+
+.logo {
+  grid-area: logo;
+  justify-self: start;
+  display: flex;
+  align-items: center; }
+
+.logo__name {
+  margin-left: 12.5px; }
+
+.landing {
+  position: relative;
+  height: 830px; }
+
+.landing__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+.landing__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%; }
+
+.landing__form {
+  margin-top: 70px;
+  width: 380px;
+  height: 374px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; }
+
+.landing__text {
+  justify-self: end;
+  align-self: end;
+  width: 300px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: right;
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px; }
+
+.footer {
+  display: grid;
+  grid-template-areas: "desc navig about services sign-mail" "line line line line line" "copy copy . . social-icon";
+  grid-template-columns: 300px 1fr 1fr 1fr 260px;
+  grid-template-rows: 1fr 1px 70px;
+  padding-top: 100px; }
+
+.footer__desc {
+  grid-area: desc;
+  margin-right: 40px; }
+
+.footer__nav {
+  grid-area: navig; }
+
+.footer__about {
+  grid-area: about;
+  padding-bottom: 100px; }
+
+.footer__services {
+  grid-area: services; }
+
+.footer__sign-mail {
+  grid-area: sign-mail; }
+
+.footer__line {
+  grid-area: line;
+  border: 0.5px solid rgba(31, 32, 65, 0.25);
+  width: 100%; }
+
+.footer__text {
+  font-size: 14px;
+  margin-top: 20px;
+  color: rgba(31, 32, 65, 0.75);
+  line-height: 24px; }
+
+.footer__copy {
+  grid-area: copy;
+  margin: 0;
+  padding: 26px 0; }
+
+.footer__social-icon {
+  grid-area: social-icon;
+  justify-self: end;
+  padding-top: 20px; }
+
+.footer__heading {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold; }
+
+.footer__list {
+  display: flex;
+  flex-direction: column; }
+
+.footer__item {
+  margin-top: 20px; }
+
+.footer__input {
+  position: relative;
+  margin-top: 20px; }
+
+.footer__input-mail {
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px; }
+  .footer__input-mail::placeholder {
+    padding: 0 15px;
+    color: rgba(31, 32, 65, 0.25);
+    font-size: 14px; }
+
+.footer__submit {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  background-color: transparent;
+  border: none; }
+
+.footer__icon-item {
+  margin-left: 20px; }
 
 /*# sourceMappingURL=style.css.map*/

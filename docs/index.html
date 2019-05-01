@@ -4,21 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document        </title>
+    <title>Main Page       </title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
 <header class="header wrap">
-  <div class="header-logo">
-    <div class="header-logo__icon"><img class="logo__img" src="img/logo__icon.svg"></div>
-    <div class="header-logo__name"><img class="logo__name" src="img/logo__name.svg"></div>
-  </div>
+<div class="logo">
+  <div class="logo__icon"><img class="logo__img" src="img/logo__icon.svg"></div>
+  <div class="logo__name"><img class="logo__img" src="img/logo__name.svg"></div>
+</div>
   <nav class="header-nav"><a class="header-nav__link" href="#">О нас</a><a class="header-nav__link header-nav__link_dropdown" href="#">Услуги</a><a class="header-nav__link" href="#">Вакансии</a><a class="header-nav__link" href="#">Новости</a><a class="header-nav__link header-nav__link_dropdown" href="#">Соглашения</a></nav>
   <button class="header__login" type="button">Войти</button>
   <button class="header__sign" type="button">Зарегистрироваться</button>
 </header>
 <section class="landing">
   <div class="landing__bg" style="background-image: url('img/image_3.jpg')"></div>
-  <div class="landing__content wrap"></div>
+  <div class="landing__content wrap">
+    <form class="landing__form">
+      <h2 class="landing__form-title">Найдём номера под ваши пожелания</h2>
+      <label class="landing__label" for="coming">Прибытие</label>
+      <select class="landing__form-data" id="coming">
+        <option class="laning__form-option"></option>
+      </select>
+      <label class="landing__label" for="going">Выезд</label>
+      <select class="landing__form-data" id="going"></select>
+    </form>
+    <div class="landing__text">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
+  </div>
 </section>
+<footer class="footer wrap">
+  <div class="footer__desc">
+<div class="logo">
+  <div class="logo__icon"><img class="logo__img" src="img/logo__icon.svg"></div>
+  <div class="logo__name"><img class="logo__img" src="img/logo__name.svg"></div>
+</div>
+    <div class="footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</div>
+  </div>
+  <div class="footer__nav">
+    <h4 class="footer__heading">Навигация</h4>
+    <nav class="footer__list"><a class="footer__item" href="#">О нас</a><a class="footer__item" href="#">Новости</a><a class="footer__item" href="#">Служба поддержки</a><a class="footer__item" href="#">Услуги</a></nav>
+  </div>
+  <div class="footer__about">
+    <h4 class="footer__heading">О нас</h4>
+    <nav class="footer__list"><a class="footer__item" href="#">О сервисе</a><a class="footer__item" href="#">Наша команда</a><a class="footer__item" href="#">Вакансии</a><a class="footer__item" href="#">Инвесторы</a></nav>
+  </div>
+  <div class="footer__services">
+    <h4 class="footer__heading">Служба поддержки</h4>
+    <nav class="footer__list"><a class="footer__item" href="#">Соглашения</a><a class="footer__item" href="#">Сообщества</a><a class="footer__item" href="#">Связь с нами</a></nav>
+  </div>
+  <div class="footer__sign-mail">
+    <h4 class="footer__heading">Подписка</h4>
+    <div class="footer__text">Получайте специальные предложения и новости сервиса</div>
+    <div class="footer__input">
+      <input class="footer__input-mail" type="email" placeholder="Email">
+      <button class="footer__submit" type="submit"><img class="footer__submit-arrow" src="img/arrow-mail-button.svg"></button>
+    </div>
+  </div>
+  <div class="footer__line"></div>
+  <div class="footer__copy footer__text">Copyright © 2018 Toxin отель. Все права зачищены.</div>
+  <div class="footer__social-icon"><img class="footer__icon-item" src="img/icon-twitter.svg" alt="social-icon"><img class="footer__icon-item" src="img/icon-facebook.svg" alt="social-icon"><img class="footer__icon-item" src="img/icon-insta.svg" alt="social-icon"></div>
+</footer>
   <script type="text/javascript" src="main.bundle.js"></script></body>
 </html>
