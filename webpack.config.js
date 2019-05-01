@@ -64,7 +64,7 @@ const config = {
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 65
+                quality: 90
               },
               // optipng.enabled: false will disable optipng
               optipng: {

@@ -10,18 +10,21 @@
 body {
     max-width: 1440px;
     margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    color: aqua;
+    font-family: 'Montserrat', sans-serif;    
 }
 
 .wrap {
-    max-width: 1160px;
+    max-width: 1200px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
-h1 {
-    color: red;
+a {
+    text-decoration: none;
+    color: rgba(31, 32, 65, 0.5);
 }
 
-
-@import 'components/header/header.scss';
+@import 'components/header/header';
+@import 'components/logo/logo';
+@import 'components/landing/landing';
+@import 'components/footer/footer';

@@ -6,14 +6,6 @@
     grid-gap: 0 20px;
     align-items: center; 
 }
-
-.header-logo {
-    grid-area: logo;
-    justify-self: start;
-    display: flex;
-    align-items: center;
-}
-
 .header-nav {
     grid-area: navigation;
     justify-self: end;
@@ -57,20 +49,14 @@
     background-origin: border-box;
 }
 
-.header-logo__name {
-    margin-left: 12.5px;    
-}
-
-.header-nav__link {
-    color: #1F2041;
-    text-decoration: none;
+.header-nav__link {      
     margin-right: 20px;
         &:last-child {
             margin: 0;
         }
         &_dropdown::after {    
-    content: url('/img/arrow-down.svg');
-    margin-left: 5px;        
-    }
+        content: url('/img/arrow-down.svg');
+        margin-left: 5px;        
+        }
 }
 
