@@ -31,7 +31,7 @@ const config = {
     new CopyWebpackPlugin([
       {from: './src/utils', to: './utils'}
     ]),
-    new CssUrlRelativePlugin('img/')
+    new CssUrlRelativePlugin('docs/img/')
   ],
   module: {
     rules: [      
