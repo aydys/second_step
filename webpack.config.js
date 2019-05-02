@@ -45,7 +45,7 @@ const config = {
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          publicPath: '/',         
+          publicPath: './',         
           fallback: "style-loader",
           use: [           
             {
