@@ -55,7 +55,7 @@
             margin: 0;
         }
         &_dropdown::after {    
-        content: url('./img/arrow-down.svg');
+        content: url('components/header/arrow-down.svg');
         margin-left: 5px;        
         }
 }

@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CssUrlRelativePlugin = require('css-url-relative-plugin');
 
 const config = {
   entry: './src/index.js',
@@ -11,6 +12,11 @@ const config = {
   },
   devServer: {
     overlay: true    
+  },
+  resolve: {
+    alias: {
+      'heading': path.resolve(__dirname, 'src/components/header')
+    }   
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -24,7 +30,8 @@ const config = {
     new ExtractTextPlugin("style.css"),
     new CopyWebpackPlugin([
       {from: './src/utils', to: './utils'}
-    ])
+    ]),
+    new CssUrlRelativePlugin('img/')
   ],
   module: {
     rules: [      
@@ -38,14 +45,16 @@ const config = {
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
+          publicPath: '/',         
           fallback: "style-loader",
-          use: [
+          use: [           
             {
               loader: "css-loader"
-            },            
+            },                      
             {
               loader: "sass-loader"
-            }                        
+            },
+                                    
           ]
         })
       },

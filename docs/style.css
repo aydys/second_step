@@ -66,7 +66,7 @@ a {
   .header-nav__link:last-child {
     margin: 0; }
   .header-nav__link_dropdown::after {
-    content: url("/img/arrow-down.svg");
+    content: url(/img/arrow-down.svg);
     margin-left: 5px; }
 
 .logo {
@@ -195,5 +195,3 @@ a {
 
 .footer__icon-item {
   margin-left: 20px; }
-
-/*# sourceMappingURL=style.css.map*/
