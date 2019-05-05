@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -7,4 +7,14 @@ html(lang="en")
         title Search Page
     body
         include components/header/header
-        h1 Hi! I'm Search Page.
+        .search.wrap
+            .search__aside
+                .ui-kit__inner
+                    .input__inner(id="datepicker_wrap")
+                        label.ui-kit__label(for="startDate") Дата пребывания в отеле
+                        .input__form
+                            input.input__date(id="startDate" type='text' placeholder='ДД.ММ.ГГГГ' data-input)        
+                            .input__submit(data-toggle)
+                                img.input__submit-arrow(src='img/arrow-down.svg' )
+            .search__slider
+        include components/footer/footer        

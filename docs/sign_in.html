@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Search Page</title>
+    <title>Sign page</title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
 <header class="header wrap">
@@ -16,20 +16,20 @@
     <button class="header__login" type="button">Войти</button></a><a href="sign_up.html">
     <button class="header__sign" type="button">Зарегистрироваться</button></a>
 </header>
-    <div class="search wrap">
-      <div class="search__aside">
-        <div class="ui-kit__inner">
-          <div class="input__inner" id="datepicker_wrap">
-            <label class="ui-kit__label" for="startDate">Дата пребывания в отеле</label>
-            <div class="input__form">
-              <input class="input__date" id="startDate" type="text" placeholder="ДД.ММ.ГГГГ" data-input>
-              <div class="input__submit" data-toggle><img class="input__submit-arrow" src="img/arrow-down.svg"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="search__slider"></div>
+<div class="sign__bg" style="background-image: url('img/sign.jpg')">
+  <form class="sign-in__form">
+    <h2 class="sign__form-title">Войти</h2>
+    <input class="sign__input" placeholder="Email">
+    <input class="sign__input" placeholder="Пароль">
+    <div class="ui__button-wrap">
+      <button class="ui__button">Подобрать номер<img class="ui__button-img" src="img/arrow-btn.svg"></button>
     </div>
+    <div class="sign__invite">
+      <div class="sign__invite-question">Нет аккаунта на Toxin?</div><a href="sign_up.html">
+        <button class="sign__button-link" type="button">Создать</button></a>
+    </div>
+  </form>
+</div>
 <footer class="footer wrap">
   <div class="footer__desc">
 <div class="logo">

@@ -106,6 +106,10 @@ const config = {
       filename: 'search.html',
       template: './src/search.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'sign_in.html',
+      template: './src/sign_in.pug'
+    }),
     new ExtractTextPlugin("style.css"),
     new CopyWebpackPlugin([
       {from: './src/utils', to: './utils'}

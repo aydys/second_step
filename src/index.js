@@ -15,4 +15,6 @@ import './components/footer/icon-twitter.svg';
 import './components/footer/icon-insta.svg';
 import './components/footer/icon-facebook.svg';
 
+import './components/sign_in/sign.jpg'
+
 import "../node_modules/flatpickr/dist/flatpickr.css";
