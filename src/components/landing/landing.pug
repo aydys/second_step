@@ -3,9 +3,7 @@ section.landing
     .landing__content.wrap
         form.landing__form
             h2.landing__form-title Найдём номера под ваши пожелания
-            label.landing__label(for="coming") Прибытие
-            select.landing__form-data(id='coming')
-                option.laning__form-option
-            label.landing__label(for="going") Выезд
-            select.landing__form-data(id='going')
+            include ../ui_kit/input-date
+            include ../ui_kit/input-guest
+            include  ../ui_kit/ui_button
         .landing__text Лучшие номера для вашей работы, отдыха и просто вдохновения

@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CssUrlRelativePlugin = require('css-url-relative-plugin');
+const webpack = require('webpack');
 
 const config = {
   entry: './src/index.js',
@@ -17,37 +18,26 @@ const config = {
     alias: {
       'heading': path.resolve(__dirname, 'src/components/header')
     }   
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './src/index.pug'
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'search.html',
-      template: './src/search.pug'
-    }),
-    new ExtractTextPlugin("style.css"),
-    new CopyWebpackPlugin([
-      {from: './src/utils', to: './utils'}
-    ]),
-    new CssUrlRelativePlugin('docs/img/')
-  ],
+  },  
   module: {
-    rules: [      
+    rules: [
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/
+      // },     
       { 
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
             pretty: true
         }
-      },       
-      {
+      },
+      { 
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
-          publicPath: './',         
+          publicPath: './',
           fallback: "style-loader",
-          use: [           
+          use: [                    
             {
               loader: "css-loader"
             },                      
@@ -57,6 +47,20 @@ const config = {
                                     
           ]
         })
+      },
+      {
+        test: /\.css$/,
+        use: [ 
+            {
+              loader: 'style-loader',
+              options: {
+                insertAt: 'top'
+              },
+            },
+            {
+              loader: 'css-loader'
+            }
+          ],                 
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,        
@@ -92,7 +96,28 @@ const config = {
         exclude: /utils/,
       },    
     ]
-  }   
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './src/index.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'search.html',
+      template: './src/search.pug'
+    }),
+    new ExtractTextPlugin("style.css"),
+    new CopyWebpackPlugin([
+      {from: './src/utils', to: './utils'}
+    ]),
+    new CssUrlRelativePlugin('docs/img/'),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery'",
+      "window.$": "jquery"
+    }),    
+  ],   
 };
 
 module.exports = (env, options) => {

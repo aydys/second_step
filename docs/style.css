@@ -78,6 +78,85 @@ a {
 .logo__name {
   margin-left: 12.5px; }
 
+.ui-kit__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; }
+
+.ui-kit__label {
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 5px; }
+
+.input__inner {
+  display: flex;
+  flex-direction: column; }
+
+.input__form {
+  position: relative; }
+
+.input__submit {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  bottom: 0;
+  background-color: transparent;
+  border: none; }
+
+.input__date {
+  width: 150px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25); }
+  .input__date::placeholder {
+    padding: 10px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75); }
+
+.guest {
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; }
+
+.input-guest {
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25); }
+  .input-guest::placeholder {
+    padding: 10px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75); }
+
+.input__guest-arrow {
+  position: absolute;
+  top: 30px;
+  right: 15px; }
+
+.ui__button-wrap {
+  margin-top: 20px; }
+
+.ui__button {
+  width: 100%;
+  background-color: transparent;
+  border: solid 2px transparent;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border-radius: 22px;
+  height: 44px;
+  background-origin: border-box;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative; }
+
+.ui__button-img {
+  position: absolute;
+  right: 20px;
+  z-index: 2; }
+
+.ui-datepicker {
+  width: 320px;
+  height: 370px; }
+
 .landing {
   position: relative;
   height: 830px; }
@@ -97,11 +176,18 @@ a {
   margin-top: 70px;
   width: 380px;
   height: 374px;
+  padding: 40px 30px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px; }
+
+.landing__form-title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  margin: 0; }
 
 .landing__text {
   justify-self: end;

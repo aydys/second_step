@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main Page       </title>
+    <title>Main Page</title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
 <header class="header wrap">
@@ -21,12 +21,30 @@
   <div class="landing__content wrap">
     <form class="landing__form">
       <h2 class="landing__form-title">Найдём номера под ваши пожелания</h2>
-      <label class="landing__label" for="coming">Прибытие</label>
-      <select class="landing__form-data" id="coming">
-        <option class="laning__form-option"></option>
-      </select>
-      <label class="landing__label" for="going">Выезд</label>
-      <select class="landing__form-data" id="going"></select>
+<div class="ui-kit__inner">
+  <div class="input__inner" id="datepicker_wrap">
+    <label class="ui-kit__label" for="startDate">Прибытие</label>
+    <div class="input__form">
+      <input class="input__date" id="startDate" type="text" placeholder="ДД.ММ.ГГГГ" data-input>
+      <div class="input__submit" data-toggle><img class="input__submit-arrow" src="img/arrow-down.svg"></div>
+    </div>
+  </div>
+  <div class="input__inner">
+    <label class="ui-kit__label" for="endDate">Выезд</label>
+    <div class="input__form">
+      <input class="input__date" id="endDate" type="text" placeholder="ДД.ММ.ГГГГ" data-input>
+      <div class="input__submit" data-toggle><img class="input__submit-arrow" src="img/arrow-down.svg" id="button_input"></div>
+    </div>
+  </div>
+</div>
+<div class="guest">
+  <label class="ui-kit__label">Гости</label>
+  <input class="input-guest" placeholder="Сколько гостей">
+  <div class="input__guest-arrow"><img class="input__guest-img" src="img/arrow-down.svg" id="button_input"></div>
+</div>
+<div class="ui__button-wrap">
+  <button class="ui__button">Подобрать номер<img class="ui__button-img" src="img/arrow-btn.svg"></button>
+</div>
     </form>
     <div class="landing__text">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
   </div>
