@@ -1,0 +1,37 @@
+.sign__bg(style="background-image: url('img/sign.jpg')")
+    form.sign-up__form
+        h2.sign__form-title Регистрация аккаунта
+        .sign__name
+            input.sign-up__input(placeholder='Имя')
+            input.sign-up__input.sign-up__input-margin(placeholder='Фамилия')
+        .sign__gender
+            <label class="container">Мужчина
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+            </label>
+            <label class="container">Женщина
+                <input type="radio" name="radio">
+                <span class="checkmark"></span>
+            </label>
+        .sign__birth
+            label.sign-up__label 
+                span Дата рождения
+                input.sign-up__input(placeholder='ДД.ММ.ГГГГ' )
+        .sign__entry-data
+            label.sign-up__label
+                span данные для входа в сервис
+                input.sign-up__input(placeholder='Email')
+                input.sign-up__input.sign-up__input-margin(placeholder='Пароль')
+        .sign__offer
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            .sign__offer-text Получать спецпредложения
+        .ui__button-wrap
+            button.ui__button Перейти к оплате
+                img.ui__button-img(src='img/arrow-btn.svg')
+        .sign__invite
+            .sign__invite-question Уже есть аккаунт на Toxin?
+            a(href='sign_in.html')
+                button.sign__button-link(type="button") Войти

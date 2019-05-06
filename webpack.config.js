@@ -110,6 +110,10 @@ const config = {
       filename: 'sign_in.html',
       template: './src/sign_in.pug'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'sign_up.html',
+      template: './src/sign_up.pug'
+    }),
     new ExtractTextPlugin("style.css"),
     new CopyWebpackPlugin([
       {from: './src/utils', to: './utils'}

@@ -1,0 +1,189 @@
+.sign-up__form {    
+    width: 380px;
+    height: 646px;    
+    padding: 40px 30px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.sign__name, .sign__birth, .sign__entry-data, .sign__offer {
+    margin-top: 20px;
+}
+
+.sign-up__input-margin, .sign__gender {
+    margin-top: 10px;
+}
+
+.sign__gender {
+    display: flex;
+}
+
+// Radio Input
+
+.container {
+    display: block;
+    position: relative;
+    margin-right: 20px;
+    padding-left: 30px;    
+    cursor: pointer;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+  
+  /* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background: #FFFFFF;  
+    border: 1px solid #BC9CFF;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+  
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);;
+}
+
+// End Radio Input
+
+.sign-up__label span {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sign-up__input {    
+    width: 100%;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    &::placeholder {
+        padding: 10px;
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
+    }    
+}
+
+.sign__offer {
+    display: flex;    
+}
+
+// Toggle Style
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background-color: #FFFFFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 3px;
+    background: rgba(31, 32, 65, 0.25);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #FFFFFF;
+    border: 1px solid #BC9CFF;
+}
+
+input:checked + .slider::before {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before {
+    border-radius: 34px;
+}
+
+// End Toggle
+
+.sign__offer-text {
+    margin-left: 10px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+}
