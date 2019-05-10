@@ -1,0 +1,337 @@
+mixin stars_5
+    .stars
+        span &#9733
+        span &#9733
+        span &#9733
+        span &#9733
+        span &#9733
+
+mixin stars_4
+    .stars
+        span &#9733
+        span &#9733
+        span &#9733
+        span &#9733
+        span &#9734
+mixin stars_3
+    .stars
+        span &#9733
+        span &#9733
+        span &#9733
+        span &#9734
+        span &#9734
+mixin dots
+    <div class='gallery__dots'>    
+        <span class="dot special"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+mixin overlay
+    .search__overlay
+        img.search__overlay-left(src="img/left-arrow.svg", width="12" alt="left")
+        img.search__overlay-right(src="img/right-arrow.svg",width="12" alt="right")
+.search.wrap
+    .search__aside
+        .search__form.search__date
+            label.search__label даты пребывания в отеле
+            input.search__input.search__input-date
+            .search__input-img
+                img.search__input-arrow(src='img/arrow-down.svg' )
+        .search__form
+            label.search__label.search__guest гости
+            input.search__input.search__input-guest
+            .search__input-img
+                img.search__input-arrow(src='img/arrow-down.svg' )
+        .search__span
+            .search__span-heading
+                label.search__label Диапозон цен
+                span.search__span-price 5000-10000&#x20BD;
+            .search__span-line
+            .search__span-text Стоимость за сутки пребывания в номере
+        .search__checkbox
+            label.search__label checkbox buttons
+            .search__checkbox-inner
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='smoke')
+                    label.search__label-checkbox(for='smoke') Можно курить
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='pets' checked)
+                    label.search__label-checkbox(for='pets') Можно с питомцами
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='guest' checked)
+                    label.search__label-checkbox(for='guest') Можно пригласить гостей<br>
+                        .search__label-last (до 10 человек)
+        .search__access
+            label.search__label Доступность
+            .search__checkbox-inner
+                .search__access-item
+                    input.search__input-checkbox(type='checkbox' id='corridor')
+                    label.search__label-checkbox.search__access-label(for='corridor') Широкий коридор
+                        .search__label-last.search__access-last Ширина коридоров в номере не менее 91 см.
+                .search__access-item
+                    input.search__input-checkbox(type='checkbox' id='helper')
+                    label.search__label-checkbox.search__access-label(for='helper') Помощник для инвалидов
+                        .search__label-last.search__access-last На 1 этаже вас встретит специалист и проводит до номера.
+        .search__form
+            label.search__label удобства номера
+            input.search__input
+            .search__input-img
+                img.search__input-arrow(src='img/arrow-down.svg')
+        .search__addition
+            .search__addition-inner
+                label.search__label дополнительные удобства
+                img.search__addition-arrow(src="img/arrow-down.svg", height='8' alt="arrow")
+    .search__slider
+        h2.search__slider-title Номера, которые мы для вас подобрали
+        .search__slider-wrap
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-cell.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span.search__number-lux 888
+                            .search__price
+                                span.search__cell-bold 9900&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_5
+                            .search__rating-review
+                                span.search__cell-bold 145 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-840.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 840
+                            .search__price
+                                span.search__cell-bold 9900&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_4
+                            .search__rating-review
+                                span.search__cell-bold 65 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-980.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span.search__number-lux 980
+                            .search__price
+                                span.search__cell-bold 8500&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_3
+                            .search__rating-review
+                                span.search__cell-bold 35 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-856.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 856
+                            .search__price
+                                span.search__cell-bold 7300&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_5
+                            .search__rating-review
+                                span.search__cell-bold 19 
+                                span.search__cell-text Отзывов        
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-740.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 740
+                            .search__price
+                                span.search__cell-bold 6000&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_4
+                            .search__rating-review
+                                span.search__cell-bold 44 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-982.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 982
+                            .search__price
+                                span.search__cell-bold 5800&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_3
+                            .search__rating-review                                
+                                span.search__cell-bold 56 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-678.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 678
+                            .search__price
+                                span.search__cell-bold 5500&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_5
+                            .search__rating-review
+                                span.search__cell-bold 45 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-450.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 450
+                            .search__price
+                                span.search__cell-bold 5300&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_4
+                            .search__rating-review
+                                span.search__cell-bold 39 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-350.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 350
+                            .search__price
+                                span.search__cell-bold 5000&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_3
+                            .search__rating-review                                
+                                span.search__cell-bold 77 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-666.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 666
+                            .search__price
+                                span.search__cell-bold 5000&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_5
+                            .search__rating-review
+                                span.search__cell-bold 25 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-444.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 444
+                            .search__price
+                                span.search__cell-bold 5000&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_3
+                            .search__rating-review
+                                span.search__cell-bold 15 
+                                span.search__cell-text Отзывов
+            .search__slider-container
+                .search__cell
+                    img.search__cell-pic(src="img/room-352.jpg", alt="roo-cell")
+                    +overlay                    
+                    +dots
+                    .search__cell-inner
+                        .search__cell-desc
+                            .search__number
+                                span.search__number-size № 
+                                span 352
+                            .search__price
+                                span.search__cell-bold 5000&#x20BD; 
+                                span.search__cell-text в сутки
+                        .search__cell-line
+                        .search__rating
+                            .search__rating-star
+                                +stars_3
+                            .search__rating-review                                
+                                span.search__cell-bold 55 
+                                span.search__cell-text Отзывов
+        .search__pagin
+            .search__pagin-measure
+                .search__pagin-item.search__pagin-item_first 1
+                .search__pagin-item 2
+                .search__pagin-item 3
+                .search__pagin-item ...
+                .search__pagin-item 15
+                .search__pagin-item.search__pagin-item_last
+                    img.search__pagin-arrow(src="img/arrow-btn.svg", alt="arrow")
+            .search__pagin-text 1 – 12 из 100+ вариантов аренды

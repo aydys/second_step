@@ -18,17 +18,362 @@
 </header>
     <div class="search wrap">
       <div class="search__aside">
-        <div class="ui-kit__inner">
-          <div class="input__inner" id="datepicker_wrap">
-            <label class="ui-kit__label" for="startDate">Дата пребывания в отеле</label>
-            <div class="input__form">
-              <input class="input__date" id="startDate" type="text" placeholder="ДД.ММ.ГГГГ" data-input>
-              <div class="input__submit" data-toggle><img class="input__submit-arrow" src="img/arrow-down.svg"></div>
+        <div class="search__form search__date">
+          <label class="search__label">даты пребывания в отеле</label>
+          <input class="search__input search__input-date">
+          <div class="search__input-img"><img class="search__input-arrow" src="img/arrow-down.svg"></div>
+        </div>
+        <div class="search__form">
+          <label class="search__label search__guest">гости</label>
+          <input class="search__input search__input-guest">
+          <div class="search__input-img"><img class="search__input-arrow" src="img/arrow-down.svg"></div>
+        </div>
+        <div class="search__span">
+          <div class="search__span-heading">
+            <label class="search__label">Диапозон цен</label><span class="search__span-price">5000-10000&#x20BD;</span>
+          </div>
+          <div class="search__span-line"></div>
+          <div class="search__span-text">Стоимость за сутки пребывания в номере</div>
+        </div>
+        <div class="search__checkbox">
+          <label class="search__label">checkbox buttons</label>
+          <div class="search__checkbox-inner">
+            <div class="search__checkbox-item">
+              <input class="search__input-checkbox" type="checkbox" id="smoke">
+              <label class="search__label-checkbox" for="smoke">Можно курить</label>
+            </div>
+            <div class="search__checkbox-item">
+              <input class="search__input-checkbox" type="checkbox" id="pets" checked>
+              <label class="search__label-checkbox" for="pets">Можно с питомцами</label>
+            </div>
+            <div class="search__checkbox-item">
+              <input class="search__input-checkbox" type="checkbox" id="guest" checked>
+              <label class="search__label-checkbox" for="guest">Можно пригласить гостей<br>
+                <div class="search__label-last">(до 10 человек)</div>
+              </label>
             </div>
           </div>
         </div>
+        <div class="search__access">
+          <label class="search__label">Доступность</label>
+          <div class="search__checkbox-inner">
+            <div class="search__access-item">
+              <input class="search__input-checkbox" type="checkbox" id="corridor">
+              <label class="search__label-checkbox search__access-label" for="corridor">Широкий коридор
+                <div class="search__label-last search__access-last">Ширина коридоров в номере не менее 91 см.</div>
+              </label>
+            </div>
+            <div class="search__access-item">
+              <input class="search__input-checkbox" type="checkbox" id="helper">
+              <label class="search__label-checkbox search__access-label" for="helper">Помощник для инвалидов
+                <div class="search__label-last search__access-last">На 1 этаже вас встретит специалист и проводит до номера.</div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="search__form">
+          <label class="search__label">удобства номера</label>
+          <input class="search__input">
+          <div class="search__input-img"><img class="search__input-arrow" src="img/arrow-down.svg"></div>
+        </div>
+        <div class="search__addition">
+          <div class="search__addition-inner">
+            <label class="search__label">дополнительные удобства</label><img class="search__addition-arrow" src="img/arrow-down.svg" height="8" alt="arrow">
+          </div>
+        </div>
       </div>
-      <div class="search__slider"></div>
+      <div class="search__slider">
+        <h2 class="search__slider-title">Номера, которые мы для вас подобрали</h2>
+        <div class="search__slider-wrap">
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-cell.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span class="search__number-lux">888</span></div>
+                  <div class="search__price"><span class="search__cell-bold">9900&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">145 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-840.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>840</span></div>
+                  <div class="search__price"><span class="search__cell-bold">9900&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">65 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-980.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span class="search__number-lux">980</span></div>
+                  <div class="search__price"><span class="search__cell-bold">8500&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">35 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-856.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>856</span></div>
+                  <div class="search__price"><span class="search__cell-bold">7300&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">19 </span><span class="search__cell-text">Отзывов        </span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-740.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>740</span></div>
+                  <div class="search__price"><span class="search__cell-bold">6000&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">44 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-982.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>982</span></div>
+                  <div class="search__price"><span class="search__cell-bold">5800&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review">                               <span class="search__cell-bold">56 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-678.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>678</span></div>
+                  <div class="search__price"><span class="search__cell-bold">5500&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">45 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-450.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>450</span></div>
+                  <div class="search__price"><span class="search__cell-bold">5300&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">39 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-350.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>350</span></div>
+                  <div class="search__price"><span class="search__cell-bold">5000&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review">                               <span class="search__cell-bold">77 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-666.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>666</span></div>
+                  <div class="search__price"><span class="search__cell-bold">5000&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9733</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">25 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-444.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>444</span></div>
+                  <div class="search__price"><span class="search__cell-bold">5000&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review"><span class="search__cell-bold">15 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="search__slider-container">
+            <div class="search__cell"><img class="search__cell-pic" src="img/room-352.jpg" alt="roo-cell">
+                  <div class="search__overlay"><img class="search__overlay-left" src="img/left-arrow.svg" width="12" alt="left"><img class="search__overlay-right" src="img/right-arrow.svg" width="12" alt="right"></div><div class='gallery__dots'>    
+<span class="dot special"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+              <div class="search__cell-inner">
+                <div class="search__cell-desc">
+                  <div class="search__number"><span class="search__number-size">№ </span><span>352</span></div>
+                  <div class="search__price"><span class="search__cell-bold">5000&#x20BD; </span><span class="search__cell-text">в сутки</span></div>
+                </div>
+                <div class="search__cell-line"></div>
+                <div class="search__rating">
+                  <div class="search__rating-star">
+                        <div class="stars"><span>&#9733</span><span>&#9733</span><span>&#9733</span><span>&#9734</span><span>&#9734</span></div>
+                  </div>
+                  <div class="search__rating-review">                               <span class="search__cell-bold">55 </span><span class="search__cell-text">Отзывов</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search__pagin">
+          <div class="search__pagin-measure">
+            <div class="search__pagin-item search__pagin-item_first">1</div>
+            <div class="search__pagin-item">2</div>
+            <div class="search__pagin-item">3</div>
+            <div class="search__pagin-item">...</div>
+            <div class="search__pagin-item">15</div>
+            <div class="search__pagin-item search__pagin-item_last"><img class="search__pagin-arrow" src="img/arrow-btn.svg" alt="arrow"></div>
+          </div>
+          <div class="search__pagin-text">1 – 12 из 100+ вариантов аренды</div>
+        </div>
+      </div>
     </div>
 <footer class="footer wrap">
   <div class="footer__desc">

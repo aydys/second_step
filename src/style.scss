@@ -7,6 +7,12 @@
     src: url('/utils/Montserrat-Regular.woff') format('woff');
 }
 
+@font-face {
+    font-family: "Montserrat";
+    src: url('/utils/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
 body {
     max-width: 1440px;
     margin: 0 auto;
@@ -31,3 +37,4 @@ a {
 @import 'components/footer/footer';
 @import 'components/sign_in/sign_in.scss';
 @import 'components/sign_up/sign_up.scss';
+@import 'components/search/search.scss';

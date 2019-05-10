@@ -6,7 +6,10 @@ const CssUrlRelativePlugin = require('css-url-relative-plugin');
 const webpack = require('webpack');
 
 const config = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    second: './src/components/ui_kit/ui_kit.js'
+  },
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: "[name].bundle.js",    
@@ -21,10 +24,10 @@ const config = {
   },  
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/
-      // },     
+      {
+        test: /\.js$/,
+        exclude: /node_modules/
+      },     
       { 
         test: /\.pug$/,
         loader: 'pug-loader',
@@ -104,15 +107,18 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       filename: 'search.html',
-      template: './src/search.pug'
+      template: './src/search.pug',
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       filename: 'sign_in.html',
-      template: './src/sign_in.pug'
+      template: './src/sign_in.pug',
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       filename: 'sign_up.html',
-      template: './src/sign_up.pug'
+      template: './src/sign_up.pug',
+      chunks: ['main']
     }),
     new ExtractTextPlugin("style.css"),
     new CopyWebpackPlugin([
