@@ -1,13 +1,13 @@
-.ui-kit__inner
-    .input__inner(id="datepicker_wrap")
+.ui-kit__inner(id="datepicker_wrap")
+    .input__inner
         label.ui-kit__label(for="startDate") Прибытие
         .input__form
             input.input__date(id="startDate" type='text' placeholder='ДД.ММ.ГГГГ' data-input)        
             .input__submit(data-toggle)
-                img.input__submit-arrow(src='img/arrow-down.svg' )
+                img.input__submit-arrow(src='img/arrow-down.svg' )        
     .input__inner
         label.ui-kit__label(for="endDate") Выезд
         .input__form
-            input.input__date(id="endDate" type='text' placeholder='ДД.ММ.ГГГГ' data-input)        
+            input.input__date(id="endDate" type='text' placeholder='ДД.ММ.ГГГГ')        
             .input__submit(data-toggle)
-                img.input__submit-arrow(src='img/arrow-down.svg' id='button_input')
+                img.input__submit-arrow(src='img/arrow-down.svg' id='button_input' onclick="return false")

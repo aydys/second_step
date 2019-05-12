@@ -30,7 +30,26 @@ import './components/search/room-666.jpg';
 import './components/search/room-444.jpg';
 import './components/search/room-352.jpg';
 
-import './components/search/left-arrow.svg'
-import './components/search/right-arrow.svg'
+import './components/search/left-arrow.svg';
+import './components/search/right-arrow.svg';
+
+import './components/details/main-room.jpg';
+import './components/details/second-room.jpg';
+import './components/details/third-room.jpg';
+import './components/details/grey-circle.svg';
+import './components/details/smile.svg';
+import './components/details/flat.svg';
+import './components/details/fire.svg';
+import './components/details/avatar1.png';
+import './components/details/avatar2.png';
+import './components/details/favorite.svg';
+import './components/details/favorite_grey.svg';
+import './components/details/bullet-orange.svg';
+import './components/details/bullet-green.svg';
+import './components/details/bullet-violet.svg';
+import './components/details/bullet-black.svg';
+import './components/details/circle-yellow.svg';
+import './components/details/circle-violet.svg';
+import './components/details/circle-green.svg';
 
 import "../node_modules/flatpickr/dist/flatpickr.css";

@@ -34,6 +34,7 @@
     width: 150px;
     height: 44px;
     border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
 
     &::placeholder {
         padding: 10px;
@@ -52,6 +53,7 @@
 .input-guest {
     height: 44px;
     border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
     &::placeholder {
         padding: 10px;
         font-size: 14px;
@@ -73,8 +75,7 @@
 
 .ui__button {
     width: 100%;
-    background-color: transparent;
-    // appearance: none;    
+    background-color: transparent;      
     border: solid 2px transparent;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;

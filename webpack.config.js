@@ -87,7 +87,7 @@ const config = {
                 enabled: false,
               },
               pngquant: {
-                quality: '65-90',
+                quality: '90-95',
                 speed: 4
               },
               gifsicle: {
@@ -108,6 +108,11 @@ const config = {
     new HtmlWebpackPlugin({
       filename: 'search.html',
       template: './src/search.pug',
+      chunks: ['main']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'details.html',
+      template: './src/details.pug',
       chunks: ['main']
     }),
     new HtmlWebpackPlugin({

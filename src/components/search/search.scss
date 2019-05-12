@@ -155,8 +155,7 @@
 
 .search__slider-container {
     width: 270px;
-    margin-bottom: 20px;
-    color: rgba(31, 32, 65, 0.5);    
+    margin-bottom: 20px;       
 }
 
 .search__cell {
@@ -200,6 +199,10 @@
     justify-content: space-between;
 }
 
+.search__price {
+    color: rgba(31, 32, 65, 0.5); 
+}
+
 .search__number {
     font-size: 19px;
     font-weight: bold;
@@ -229,6 +232,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.search__rating-review {
+    color: rgba(31, 32, 65, 0.5);
 }
 
 .search__cell-bold {

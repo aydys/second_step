@@ -6,10 +6,8 @@ flatpickr.localize(Russian);
 const nativeElement = document.querySelector('#datepicker_wrap');
 
 flatpickr(nativeElement, {  
-  wrap: true,
-  plugins: [new rangePlugin({
-        input: "#endDate",                         
-    })]  
+  wrap: true,  
+  plugins: [new rangePlugin({input: "#endDate"})]  
 })
 
 
