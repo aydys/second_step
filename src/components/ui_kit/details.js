@@ -8,8 +8,15 @@ flatpickr.localize(Russian);
 
 const nativeElement = document.querySelector('#datepicker_wrap');
 
+let data = sessionStorage.getItem('arrDate');
+let arrSplit = data.split(' — ');
+
+let date1 = arrSplit[0];
+let date2 = arrSplit[1];
+
 let calendar = flatpickr(nativeElement, {  
   wrap: true,
+  defaultDate: [`${date1}`, `${date2}`],
   dateFormat: "d m",  
   altInput: true,
   altFormat: "d.m.Y",
@@ -46,12 +53,3 @@ btnUse.addEventListener('click', function() {
 
 const elementCalendar = document.querySelector('.flatpickr-calendar');
 elementCalendar.appendChild(container);
-
-// Передача данных через веб-хранилище
-
-const button1 = document.getElementById('button1');
-
-button1.addEventListener('click', function(){
-  const inputStart = document.getElementById('startDate').value;
-  sessionStorage.setItem('arrDate', `${inputStart}`);
-})

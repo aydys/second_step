@@ -171,7 +171,7 @@
     position: absolute;
     height: 156px;
     width: 100%;
-    top: 25%;
+    top: 0;
     opacity: 0;
     transition: 0.5s ease;
 
@@ -182,11 +182,13 @@
 
 .search__overlay-left {
     position: absolute;
+    top: 50%;
     left: 20px;
 }
 
 .search__overlay-right {
     position: absolute;
+    top: 50%;
     right: 20px;
 }
 

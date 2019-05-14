@@ -8,7 +8,9 @@ const webpack = require('webpack');
 const config = {
   entry: {
     main: './src/index.js',
-    second: './src/components/ui_kit/ui_kit.js'
+    second: './src/components/ui_kit/ui_kit.js',
+    third: './src/components/ui_kit/search.js',
+    fourth: './src/components/ui_kit/details.js'
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -103,17 +105,18 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.pug'
+      template: './src/index.pug',
+      chunks: ['main','second']
     }),
     new HtmlWebpackPlugin({
       filename: 'search.html',
       template: './src/search.pug',
-      chunks: ['main']
+      chunks: ['main', 'third']
     }),
     new HtmlWebpackPlugin({
       filename: 'details.html',
       template: './src/details.pug',
-      chunks: ['main']
+      chunks: ['main','fourth']
     }),
     new HtmlWebpackPlugin({
       filename: 'sign_in.html',

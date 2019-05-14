@@ -52,4 +52,7 @@ import './components/details/circle-yellow.svg';
 import './components/details/circle-violet.svg';
 import './components/details/circle-green.svg';
 
+import './components/ui_kit/arrow_back.svg';
+import './components/ui_kit/arrow_forward.svg';
+
 import "../node_modules/flatpickr/dist/flatpickr.css";

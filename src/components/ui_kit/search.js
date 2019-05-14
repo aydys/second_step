@@ -1,23 +1,26 @@
 import flatpickr from "flatpickr";
-import rangePlugin from '../../../node_modules/flatpickr/dist/plugins/rangePlugin';
 
 // Локализация Flatpickr и инициализация его самого
 
 const Russian = require("../../../node_modules/flatpickr/dist/l10n/ru.js").default.ru;
 flatpickr.localize(Russian);
 
-const nativeElement = document.querySelector('#datepicker_wrap');
+let data = sessionStorage.getItem('arrDate');
+let arrSplit = data.split(' — ');
 
-let calendar = flatpickr(nativeElement, {  
-  wrap: true,
+let date1 = arrSplit[0];
+let date2 = arrSplit[1];
+
+let calendar = flatpickr( ".search__input-date", {
+    mode: "range",    
+    defaultDate: [`${date1}`, `${date2}`],
   dateFormat: "d m",  
   altInput: true,
-  altFormat: "d.m.Y",
+  altFormat: "d M",
   prevArrow: "<img src='img/arrow_back.svg'>",
   nextArrow: "<img src='img/arrow_forward.svg'>",  
   position: 'below',
-  closeOnSelect: false,
-  plugins: [new rangePlugin({input: "#endDate"})]  
+  closeOnSelect: false,   
 });
 
 // Добавление кнопок "Очистить" и "Применить" 
@@ -49,9 +52,12 @@ elementCalendar.appendChild(container);
 
 // Передача данных через веб-хранилище
 
-const button1 = document.getElementById('button1');
+const button2 = document.querySelectorAll('.search__number');
 
-button1.addEventListener('click', function(){
-  const inputStart = document.getElementById('startDate').value;
-  sessionStorage.setItem('arrDate', `${inputStart}`);
-})
+[].forEach.call(button2, (e)=>{
+    e.addEventListener('click', function(){
+        const inputStart = document.querySelector('.search__input-date').value;
+        sessionStorage.setItem('arrDate', `${inputStart}`);
+    })
+});
+

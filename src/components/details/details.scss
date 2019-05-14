@@ -1,8 +1,7 @@
 .details__gallery {
     max-width: 1440px;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    // grid-gap: 70px;    
+    grid-template-columns: 2fr 1fr;       
 }
 
 .details__gallery-img {
@@ -284,7 +283,7 @@
 
 .details__icon-char2 {
     position: absolute;
-    top: 25%;
+    top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
 }
