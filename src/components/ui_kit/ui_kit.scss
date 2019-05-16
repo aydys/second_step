@@ -50,7 +50,7 @@
     flex-direction: column;
 }
 
-.input__date[readonly], .search__input-date[readonly]  {
+.input__date[readonly], .search__input-date[readonly], .search__input-dropdown[readonly]  {
     text-transform: lowercase;
     padding-left: 10px;
     font-size: 14px;
@@ -265,7 +265,17 @@ span.flatpickr-weekday {
     z-index: 10;
 }
 
-.blockAdults, .blockChildren, .blockBaby {
+.search__container-dropdown {
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    border: 1px solid gba(31, 32, 65, 0.5);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    top: 100%;
+    z-index: 10;
+}
+
+.blockAdults, .blockChildren, .blockBaby, .search__dropdown-item {
     margin: 20px 0;
     padding: 0 20px;
     width: 100%;
@@ -274,18 +284,18 @@ span.flatpickr-weekday {
     align-items: center;
 }
 
-.counterContainer {
+.counterContainer, .search__dropdown-counter {
     display: flex;
 }
 
-.textAdults, .textChildren, .textBaby {
+.textAdults, .textChildren, .textBaby, .search__dropdown-text {
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
     color:#1F2041;
 } 
 
-.counterNumber {
+.counterNumber, .search__counter-text {
     padding: 5px 10px;
     font-size: 12px;
     font-weight: bold;
@@ -293,7 +303,7 @@ span.flatpickr-weekday {
     text-align: center;
 }
 
-.btnPlus, .btnMinus {
+.btnPlus, .btnMinus, .search__btn-minus, .search__btn-plus {
     background: transparent;
     border-radius: 50%;
     border: 1px solid rgba(31, 32, 65, 0.5);

@@ -75,9 +75,28 @@ mixin overlay
                         .search__label-last.search__access-last На 1 этаже вас встретит специалист и проводит до номера.
         .search__form
             label.search__label удобства номера
-            input.search__input
+            input.search__input.search__input-dropdown(id='prefInput' readonly="readonly" placeholder="2 спальни, 2 кровати...")
             .search__input-img
-                img.search__input-arrow(src='img/arrow-down.svg')
+                img.search__input-arrow(src='img/arrow-down.svg' id='arrowPref')
+            .search__container-dropdown
+                .search__dropdown-item
+                    .search__dropdown-text Спальни
+                    .search__dropdown-counter
+                        button.search__btn-minus(type='button' id='minus1') -
+                        .search__counter-text(id='text-number1') 2
+                        button.search__btn-plus(type='button' id='plus1') +
+                .search__dropdown-item
+                    .search__dropdown-text Кровати
+                    .search__dropdown-counter
+                        button.search__btn-minus(type='button' id='minus2') -
+                        .search__counter-text(id='text-number2') 2
+                        button.search__btn-plus(type='button' id='plus2') +
+                .search__dropdown-item
+                    .search__dropdown-text Ванные комнаты
+                    .search__dropdown-counter                        
+                        button.search__btn-minus(type='button' id='minus3') -
+                        .search__counter-text(id='text-number3') 0
+                        button.search__btn-plus(type='button' id='plus3') +
         .search__addition
             .search__addition-inner
                 label.search__label дополнительные удобства
