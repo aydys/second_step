@@ -1,11 +1,23 @@
 .footer {
     display: grid;
-    grid-template-areas: "desc navig about services sign-mail"
-                        "line line line line line"
-                        "copy copy . . social-icon";
+    grid-template-areas: "desc navig about services sign-mail";
     grid-template-columns: 300px 1fr 1fr 1fr 260px;
-    grid-template-rows: 1fr 1px 70px;             
+    grid-template-rows: 168px;              
     padding-top: 100px;
+    padding-bottom: 100px;    
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__inner {
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.3);
+}
+
+.footer__inner-bottom {
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
 }
 
 .footer__desc {

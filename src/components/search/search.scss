@@ -308,3 +308,16 @@
     margin: 10px 0 0;
     text-align: center;
 }
+
+.addition__container {
+    margin-top: 20px;
+    transition:  ease-in-out 0.2s;
+}
+
+.transformed {
+    transform: rotate(180deg);    
+}
+
+.search__addition-arrow {
+    transition:  ease-in-out 0.2s;
+}

@@ -100,7 +100,32 @@ mixin overlay
         .search__addition
             .search__addition-inner
                 label.search__label дополнительные удобства
-                img.search__addition-arrow(src="img/arrow-down.svg", height='8' alt="arrow")
+                img.search__addition-arrow(id="animArrow" src="img/arrow-down.svg", height='8' alt="arrow")
+            .addition__container
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='breakfast')
+                    label.search__label-checkbox(for='breakfast') Завтрак
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='table' checked)
+                    label.search__label-checkbox(for='table') Письменный стол
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='chair' checked)
+                    label.search__label-checkbox(for='chair') Стул для кормления
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='bed' checked)
+                    label.search__label-checkbox(for='bed') Кроватка
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='television1')
+                    label.search__label-checkbox(for='television1') Телевизор
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='shamboo1')
+                    label.search__label-checkbox(for='shamboo1') Шампунь
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='television2')
+                    label.search__label-checkbox(for='television2') Телевизор
+                .search__checkbox-item
+                    input.search__input-checkbox(type='checkbox' id='shamboo2')
+                    label.search__label-checkbox(for='shamboo2') Шампунь
     .search__slider
         h2.search__slider-title Номера, которые мы для вас подобрали
         .search__slider-wrap

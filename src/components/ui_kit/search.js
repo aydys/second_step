@@ -495,3 +495,22 @@ plus3.addEventListener('click', function(){
     textNumber3.innerHTML = `${countPref3}`;
     prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}, ${countPref3} ${text3}`;    
 })
+
+// Additional Preferences
+
+const addPref = document.querySelector('.search__addition-inner');
+const animArrow = document.getElementById('animArrow');
+
+const contPref = document.querySelector('.addition__container');
+contPref.setAttribute('style', 'visibility:hidden');
+
+addPref.addEventListener('click', function(){
+    const checkPref = contPref.getAttribute('style');
+    if (checkPref == 'visibility:hidden') {
+        contPref.setAttribute('style','visibility:visible');
+        animArrow.classList.add("transformed");
+    } else {
+        contPref.setAttribute('style','visibility:hidden');
+        animArrow.classList.remove("transformed");
+    }
+})
