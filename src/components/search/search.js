@@ -1,6 +1,8 @@
 // При пустом sessionStorage [arrDate] возникает предупреждение
 
 import flatpickr from "flatpickr";
+import noUiSlider from "nouislider";
+import wNumb from "wnumb";
 
 // Локализация Flatpickr и инициализация его самого
 
@@ -520,4 +522,32 @@ addPref.addEventListener('click', function(){
         contPref.setAttribute('style','visibility:hidden');
         animArrow.classList.remove("transformed");
     }
+})
+
+// Price Range Slider
+
+const slider = document.querySelector('.search__span-line');
+const valueContainer = document.querySelector('.search__span-price');
+
+noUiSlider.create(slider, {
+    start: [5000, 10000],
+    step: 100,
+    behaviour: 'unconstrained-tap',
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 15000
+    },
+    ariaFormat: wNumb({
+        decimals: 0
+    }),
+    format: wNumb({
+        decimals: 0,
+        thousand: ' ',
+        suffix: '₽'
+    })
+});
+
+slider.noUiSlider.on('update', function (values){
+    valueContainer.innerHTML = values.join(' - ')
 })

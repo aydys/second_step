@@ -1,4 +1,6 @@
 import './style.scss';
+import "../node_modules/flatpickr/dist/flatpickr.css";
+import "../node_modules/nouislider/distribute/nouislider.css"
 
 import './components/ui_kit/header/img/arrow-down.svg';
 
@@ -56,4 +58,3 @@ import './components/details/img/circle-green.svg';
 import './components/landing/img/arrow_back.svg';
 import './components/landing/img/arrow_forward.svg';
 
-import "../node_modules/flatpickr/dist/flatpickr.css";
