@@ -4,12 +4,12 @@
 
 @font-face {
     font-family: "Montserrat", sans-serif;
-    src: url('/utils/Montserrat-Regular.woff') format('woff');
+    src: url('/fonts/Montserrat-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: "Montserrat", sans-serif;
-    src: url('/utils/Montserrat-Bold.woff') format('woff');
+    src: url('/fonts/Montserrat-Bold.woff') format('woff');
     font-weight: bold;
 }
 
@@ -30,11 +30,18 @@ a {
     color: rgba(31, 32, 65, 0.5);
 }
 
-@import 'components/header/header';
-@import 'components/logo/logo';
-@import 'components/ui_kit/ui_kit.scss';
+@import 'components/ui_kit/header/header';
+@import 'components/ui_kit/footer/footer';
+@import 'components/ui_kit/logo/logo';
+
+@import 'components/ui_kit/button-in/button-in';
+@import 'components/ui_kit/button-up/button-up';
+@import 'components/ui_kit/button-ui/button-ui';
+
+@import 'components/ui_kit/input-guest/input-guest';
+@import 'components/ui_kit/input-date/input-date';
+
 @import 'components/landing/landing';
-@import 'components/footer/footer';
 @import 'components/sign_in/sign_in.scss';
 @import 'components/sign_up/sign_up.scss';
 @import 'components/search/search.scss';

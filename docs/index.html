@@ -13,24 +13,24 @@
   <div class="logo__name"><img class="logo__img" src="img/logo__name.svg"></div>
 </div>
   <nav class="header-nav"><a class="header-nav__link" href="#">О нас</a><a class="header-nav__link header-nav__link_dropdown" href="#">Услуги</a><a class="header-nav__link" href="#">Вакансии</a><a class="header-nav__link" href="#">Новости</a><a class="header-nav__link header-nav__link_dropdown" href="#">Соглашения</a></nav><a href="sign_in.html">
-    <button class="header__login" type="button">Войти</button></a><a href="sign_up.html">
-    <button class="header__sign" type="button">Зарегистрироваться</button></a>
+    <button class="header__login button-in" type="button">Войти</button></a><a href="sign_up.html">
+    <button class="header__sign button-up" type="button">Зарегистрироваться</button></a>
 </header>
 <section class="landing">
   <div class="landing__bg" style="background-image: url('img/image_3.jpg')"></div>
   <div class="landing__content wrap">
     <form class="landing__form">
       <h2 class="landing__form-title">Найдём номера под ваши пожелания</h2>
-<div class="ui-kit__inner" id="datepicker_wrap">
+<div class="input-date__inner" id="datepicker_wrap">
   <div class="input__inner">
-    <label class="ui-kit__label" for="startDate">Прибытие</label>
+    <label class="input-date__label" for="startDate">Прибытие</label>
     <div class="input__form">
       <input class="input__date" id="startDate" type="text" placeholder="ДД.ММ.ГГГГ" data-input>
       <div class="input__submit" data-toggle><img class="input__submit-arrow" src="img/arrow-down.svg"></div>
     </div>
   </div>
   <div class="input__inner">
-    <label class="ui-kit__label" for="endDate">Выезд</label>
+    <label class="input-date__label" for="endDate">Выезд</label>
     <div class="input__form">
       <input class="input__date" id="endDate" type="text" placeholder="ДД.ММ.ГГГГ">
       <div class="input__submit" data-toggle><img class="input__submit-arrow" src="img/arrow-down.svg" id="button_input" onclick="return false"></div>
@@ -41,10 +41,8 @@
   <label class="ui-kit__label">Гости</label>
   <input class="input-guest" placeholder="Сколько гостей">
   <div class="input__guest-arrow"><img class="input__guest-img" src="img/arrow-down.svg" id="button_input"></div>
-</div>
-<div class="ui__button-wrap">   
-  <button class="ui__button" id="button1" type="button"><a href="search.html">Подобрать номер<img class="ui__button-img" src="img/arrow-btn.svg"></a></button>
-</div>
+</div><a class="button__link" href="search.html">    
+        <div class="button-ui" id="button1" type="button"><span class="button-ui__text">Подобрать номер</span><img class="button-ui__img" src="img/arrow-btn.svg"></div></a>
     </form>
     <div class="landing__text">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
   </div>

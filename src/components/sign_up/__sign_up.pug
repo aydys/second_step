@@ -28,10 +28,8 @@
                 <span class="slider round"></span>
             </label>
             .sign__offer-text Получать спецпредложения
-        .ui__button-wrap
-            button.ui__button Перейти к оплате
-                img.ui__button-img(src='img/arrow-btn.svg')
+        include ../ui_kit/button-ui/button-ui
         .sign__invite
             .sign__invite-question Уже есть аккаунт на Toxin?
             a(href='sign_in.html')
-                button.sign__button-link(type="button") Войти
+                button.sign__button-link.button-in(type="button") Войти

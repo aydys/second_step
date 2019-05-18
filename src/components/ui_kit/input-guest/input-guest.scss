@@ -1,0 +1,29 @@
+.guest {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-guest[readonly], .search__input-guest[readonly] {    
+    padding-left: 10px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+}
+.input-guest {
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    &::placeholder {        
+        padding: 10px;
+        font-size: 14px;
+        color: rgba(31, 32, 65, 0.75);
+    }    
+}
+
+.input__guest-arrow {
+    position: absolute;
+    top: 30px;
+    right: 15px;
+    
+}

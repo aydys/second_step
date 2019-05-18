@@ -1,6 +1,20 @@
 import flatpickr from "flatpickr";
 import rangePlugin from '../../../node_modules/flatpickr/dist/plugins/rangePlugin';
 
+// Изменение фона
+
+const elBg = document.querySelector('.landing__bg');
+const arrayBg = ['url(img/image.jpg)','url(img/image_2.jpg)','url(img/image_3.jpg)'];
+let i = 0;
+setInterval(function(){
+    i++;
+    if(i == arrayBg.length) {
+        i = 0;
+    };
+    let imageBg = arrayBg[i];
+    elBg.setAttribute(`style`, `background-image: ${imageBg}`);
+}, 5000);
+
 // Локализация Flatpickr и инициализация его самого
 
 const Russian = require("../../../node_modules/flatpickr/dist/l10n/ru.js").default.ru;

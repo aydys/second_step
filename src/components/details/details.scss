@@ -68,7 +68,7 @@
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
     &::before {
-        content: url("components/details/grey-circle.svg");
+        content: url("components/details/img/grey-circle.svg");
         padding-right: 10px;
     }
 }
@@ -220,22 +220,22 @@
 }
 
 .details__emotion-item_orange::before {
-    content: url('components/details/bullet-orange.svg');
+    content: url('components/details/img/bullet-orange.svg');
     padding-right: 5px;
 }   
 
 .details__emotion-item_green::before {
-    content: url('components/details/bullet-green.svg');
+    content: url('components/details/img/bullet-green.svg');
     padding-right: 5px;   
 }
 
 .details__emotion-item_violet::before {
-    content: url('components/details/bullet-violet.svg');
+    content: url('components/details/img/bullet-violet.svg');
     padding-right: 5px;    
 }
 
 .details__emotion-item_black::before {
-    content: url('components/details/bullet-black.svg');
+    content: url('components/details/img/bullet-black.svg');
     padding-right: 5px;   
 }
 

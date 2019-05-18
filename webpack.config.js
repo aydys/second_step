@@ -8,9 +8,9 @@ const webpack = require('webpack');
 const config = {
   entry: {
     main: './src/index.js',
-    second: './src/components/ui_kit/ui_kit.js',
-    third: './src/components/ui_kit/search.js',
-    fourth: './src/components/ui_kit/details.js'
+    second: './src/components/landing/landing.js',
+    third: './src/components/search/search.js',
+    fourth: './src/components/details/details.js'
   },
   output: {
     path: path.resolve(__dirname, 'docs'),
@@ -130,7 +130,7 @@ const config = {
     }),
     new ExtractTextPlugin("style.css"),
     new CopyWebpackPlugin([
-      {from: './src/utils', to: './utils'}
+      {from: './src/fonts', to: './fonts'}
     ]),
     new CssUrlRelativePlugin('docs/img/'),
     new webpack.ProvidePlugin({

@@ -1,0 +1,51 @@
+.input-date__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.input-date__label {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.input__inner {
+    display: flex;
+    flex-direction: column;       
+}
+
+.input__form {
+    position: relative;
+}
+
+.input__submit {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    bottom: 0;
+
+    background-color: transparent;
+    border: none;
+}
+
+.input__date {
+    width: 150px;
+    height: 44px;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+}
+
+.input__date::placeholder {
+    text-transform: uppercase;    
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.input__date[readonly], .search__input-date[readonly], .search__input-dropdown[readonly]  {
+    text-transform: lowercase;
+    padding-left: 10px;
+    font-size: 14px;
+    color: rgba(31, 32, 65, 0.75);
+}

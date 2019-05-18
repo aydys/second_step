@@ -1,0 +1,33 @@
+.header {
+    min-height: 70px;    
+    display: grid;
+    grid-template-columns: 1fr 4fr 87px 1fr;    
+    grid-template-areas: "logo navigation login sign";
+    grid-gap: 0 20px;
+    align-items: center; 
+}
+.header-nav {
+    grid-area: navigation;
+    justify-self: end;
+}
+
+.header__login {
+    grid-area: login;
+    justify-self: end;    
+}
+
+.header__sign {
+    grid-area: sign;
+}
+
+.header-nav__link {      
+    margin-right: 20px;
+        &:last-child {
+            margin: 0;
+        }
+        &_dropdown::after {    
+        content: url('components/ui_kit/header/img/arrow-down.svg');
+        margin-left: 5px;        
+        }
+}
+

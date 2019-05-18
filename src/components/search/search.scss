@@ -101,7 +101,7 @@
 }
 
 .search__input-checkbox:checked + .search__label-checkbox::before {
-    content: url('components/search/checkmark.svg');
+    content: url('components/search/img/checkmark.svg');
     position: absolute;
     top: 0;
     left: 0;
@@ -253,6 +253,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color:  #BC9CFF;
+    background-clip: text;
 }
 
 // 

@@ -77,8 +77,8 @@
             .search__price
                 span.search__cell-bold 9900&#x20BD; 
                 span.search__cell-text в сутки
-        include ../ui_kit/input-date
-        include ../ui_kit/input-guest
+        include ../ui_kit/input-date/input-date
+        include ../ui_kit/input-guest/input-guest
         .details__form-val
             .details__form-expression 9 990₽ х 4 суток
             .details__val-summary 39 960₽
@@ -98,6 +98,7 @@
             .details__total-text Итого
             .details__total-dots 
             .details__total-amount 38 081₽
-        .ui__button-wrap
-            button.ui__button Забронировать
-                img.ui__button-img(src='img/arrow-btn.svg')
+        a.button__link(href="search.html")     
+            .button-ui(id='button1' type='button')
+                span.button-ui__text Забронировать
+                img.button-ui__img(src='img/arrow-btn.svg')

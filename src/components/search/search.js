@@ -1,32 +1,35 @@
 // При пустом sessionStorage [arrDate] возникает предупреждение
 
 import flatpickr from "flatpickr";
-import rangePlugin from '../../../node_modules/flatpickr/dist/plugins/rangePlugin';
 
 // Локализация Flatpickr и инициализация его самого
 
 const Russian = require("../../../node_modules/flatpickr/dist/l10n/ru.js").default.ru;
 flatpickr.localize(Russian);
 
-const nativeElement = document.querySelector('#datepicker_wrap');
+let date1 = null;
+let date2 = null;
 
 let data = sessionStorage.getItem('arrDate');
-let arrSplit = data.split(' — ');
 
-let date1 = arrSplit[0];
-let date2 = arrSplit[1];
+if(data != null) {
+    let arrSplit = data.split(' — ');
 
-let calendar = flatpickr(nativeElement, {  
-  wrap: true,
-  defaultDate: [`${date1}`, `${date2}`],
+    date1 = arrSplit[0];
+    date2 = arrSplit[1];
+}
+
+
+let calendar = flatpickr( ".search__input-date", {
+    mode: "range",    
+    defaultDate: [`${date1}`, `${date2}`],
   dateFormat: "d m",  
   altInput: true,
-  altFormat: "d.m.Y",
+  altFormat: "d M",
   prevArrow: "<img src='img/arrow_back.svg'>",
   nextArrow: "<img src='img/arrow_forward.svg'>",  
   position: 'below',
-  closeOnSelect: false,
-  plugins: [new rangePlugin({input: "#endDate"})]  
+  closeOnSelect: false,   
 });
 
 // Добавление кнопок "Очистить" и "Применить" 
@@ -56,11 +59,23 @@ btnUse.addEventListener('click', function() {
 const elementCalendar = document.querySelector('.flatpickr-calendar');
 elementCalendar.appendChild(container);
 
+// Передача данных через веб-хранилище
+
+const button2 = document.querySelectorAll('.search__number');
+
+[].forEach.call(button2, (e)=>{
+    e.addEventListener('click', function(){
+        const inputStart = document.querySelector('.search__input-date').value;
+        sessionStorage.setItem('arrDate', `${inputStart}`);
+    })
+});
+
 // Фильтр Гость
 
-const inputGuest = document.querySelector('.input-guest');
+const inputGuest = document.querySelector('.search__input-guest');
 inputGuest.setAttribute('readonly', 'readonly');
-const guestArea = document.querySelector('.guest');
+const guestArea = document.querySelector('.search__form-guest');
+
 
 const dropdown = document.createElement('div');
 dropdown.className = "dropdown";
@@ -138,36 +153,31 @@ counterContainer3.appendChild(counterNumber3);
 counterContainer3.appendChild(btnPlus3)
 blockBaby.appendChild(textBaby);
 blockBaby.appendChild(counterContainer3);
-
 // Счетчик Взрослые и дети
 let count1 = 0;
 let count2 = 0;
 let count3 = 0;
-
 const stringData = sessionStorage.getItem('arrGuest');
-
 if (!(stringData == null)) {
-    const splitArrGuest = stringData.split(',');    
+  const splitArrGuest = stringData.split(',');  
 
-    count1 = parseInt(splitArrGuest[0]);
-    count2 = parseInt(splitArrGuest[1]);
-    count3 = parseInt(splitArrGuest[2]);
+  count1 = parseInt(splitArrGuest[0]);
+  count2 = parseInt(splitArrGuest[1]);
+  count3 = parseInt(splitArrGuest[2]);
 
-    const val1 = splitArrGuest[3];
-    const val2 = splitArrGuest[4];
+  const val1 = splitArrGuest[3];
+  const val2 = splitArrGuest[4];
 
-    if (splitArrGuest[4]) {
-    inputGuest.value = `${val1}, ${val2}`;
-    } else {
-        inputGuest.value = `${val1}`;
-    }
+  if (splitArrGuest[4]) {
+  inputGuest.value = `${val1}, ${val2}`;
+  } else {
+      inputGuest.value = `${val1}`;
+  }
 
-    counterNumber1.innerHTML = `${count1}`;
-    counterNumber2.innerHTML = `${count2}`;
-    counterNumber3.innerHTML = `${count3}`;
+  counterNumber1.innerHTML = `${count1}`;
+  counterNumber2.innerHTML = `${count2}`;
+  counterNumber3.innerHTML = `${count3}`;
 }
-
-
 btnMinus1.addEventListener('click', function(){
     if(count1 > 0) {
         count1--;
@@ -271,8 +281,7 @@ btnPlus3.addEventListener('click', function(){
     if(count1 !== 0 && count2 !== 0 && count3 > 1) {
         inputGuest.value = `${count1 + count2} гостя, ${count3} младенца`;
     }
-})  
-
+})   
 
 // Кнопки очистить и применить
 const container2 = document.createElement('div');
@@ -298,18 +307,16 @@ btnClear2.addEventListener('click', function(){
 // функционал кнопки "Применить"
 btnUse2.addEventListener('click', function() {
     dropdown.style.display = 'none';
-    
     const valueInput = inputGuest.value;
-    const dataGuest = [count1,count2,count3,valueInput];    
-    sessionStorage.setItem('arrGuest', dataGuest);
+  const dataGuest = [count1,count2,count3,valueInput];    
+  sessionStorage.setItem('arrGuest', dataGuest);
 })
 //добавление в dropdown
 dropdown.appendChild(blockAdults);
 dropdown.appendChild(blockChildren);
 dropdown.appendChild(blockBaby);
 dropdown.appendChild(container2);
-
-
+  
 inputGuest.addEventListener('click', function(){
     const checkInput = dropdown.style.display = 'none';
     if (checkInput) {
@@ -317,11 +324,200 @@ inputGuest.addEventListener('click', function(){
     } 
 })
 
-const arrowInput = document.querySelector('.input__guest-arrow');
+const arrowInput = document.querySelector('.search__form-guest .search__input-img');
 
 arrowInput.addEventListener('click', function(e){    
     const checkInput = dropdown.style.display = 'none';
     if (checkInput) {
         dropdown.style.display = 'block';
+    }
+})
+
+// Preferences dropdown
+
+const prefInput = document.getElementById('prefInput');
+const prefDrop = document.querySelector('.search__container-dropdown');
+prefDrop.setAttribute('style', 'display:none');
+
+prefInput.addEventListener('click', function(){
+    const checkDrop = prefDrop.getAttribute('style');
+    if (checkDrop == 'display:none') {
+        prefDrop.setAttribute('style','display:block');
+    } else {
+        prefDrop.setAttribute('style','display:none');
+    }
+})
+
+const arrowInpPref = document.querySelector('#arrowPref');
+
+arrowInpPref.addEventListener('click', function(){
+    const checkDrop = prefDrop.getAttribute('style');
+    if (checkDrop == 'display:none') {
+        prefDrop.setAttribute('style','display:block');
+    } else {
+        prefDrop.setAttribute('style','display:none');
+    }
+})
+
+let countPref1 = 2;
+let text1;
+
+let countPref2 = 2;
+let text2;
+
+let countPref3 = 0;
+let text3;
+
+if(countPref1==1){
+    text1 = "спальня";            
+} else {
+text1 = "спальни";
+}
+
+if(countPref2==1){
+    text2 = "кровать";            
+} else {
+text2 = "кровати";
+}
+
+if(countPref3==1){
+    text3 = "ванная";            
+} else if (countPref3==0) {
+    text3 = "..."
+}
+else {
+    text3 = "ванные";
+}  
+
+const minus1 = document.getElementById('minus1');
+const plus1 = document.getElementById('plus1');
+const textNumber1 = document.getElementById('text-number1');
+
+minus1.addEventListener('click', function(){
+    if(countPref1>1) {
+        countPref1--;
+
+        if(countPref1==1){
+                text1 = "спальня";            
+        } else {
+            text1 = "спальни";
+        }  
+
+        textNumber1.innerHTML = `${countPref1}`;
+        
+        prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}, ${countPref3} ${text3}`;
+        if(countPref3 == 0) {
+            prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}${text3}`;
+        }   
+    }      
+})
+
+plus1.addEventListener('click', function(){    
+    ++countPref1;
+    if(countPref1==1){
+        text1 = "спальня";    
+    } else {
+        text1 = "спальни";
+    }
+
+    textNumber1.innerHTML = `${countPref1}`;
+    prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}, ${countPref3} ${text3}`;
+    if(countPref3 == 0) {
+        prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}${text3}`;
+    }    
+})
+
+const minus2 = document.getElementById('minus2');
+const plus2 = document.getElementById('plus2');
+const textNumber2 = document.getElementById('text-number2');
+
+minus2.addEventListener('click', function(){
+    if(countPref2>1) {
+        countPref2--;
+
+        if(countPref2==1){
+                text2 = "кровать";            
+        } else {
+            text2 = "кровати";
+        }  
+
+        textNumber2.innerHTML = `${countPref2}`;
+        
+        prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}, ${countPref3} ${text3}`;
+        if(countPref3 == 0) {
+            prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}${text3}`;
+        }
+    }      
+})
+
+plus2.addEventListener('click', function(){    
+    ++countPref2;
+    if(countPref2==1){
+        text2 = "кровать";    
+    } else {
+        text2 = "кровати";
+    }
+
+    textNumber2.innerHTML = `${countPref2}`;
+    prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}, ${countPref3} ${text3}`;
+    if(countPref3 == 0) {
+        prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}${text3}`;
+    }    
+})
+
+const minus3 = document.getElementById('minus3');
+const plus3 = document.getElementById('plus3');
+const textNumber3 = document.getElementById('text-number3');
+
+minus3.addEventListener('click', function(){
+    if(countPref3>0) {
+        countPref3--;
+
+        if(countPref3==1){
+            text3 = "ванная";            
+        } else if (countPref3==0) {
+            text3 = "..."
+        }
+        else {
+            text3 = "ванные";
+        }  
+
+        textNumber3.innerHTML = `${countPref3}`;
+        
+        prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}, ${countPref3} ${text3}`;
+        if(countPref3 == 0) {
+            prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}${text3}`;
+        }
+    }      
+})
+
+plus3.addEventListener('click', function(){    
+    ++countPref3;
+    if(countPref3==1){
+        text3 = "ванная";    
+    } else {
+        text3 = "ванные";
+    }
+
+    textNumber3.innerHTML = `${countPref3}`;
+    prefInput.value = `${countPref1} ${text1}, ${countPref2} ${text2}, ${countPref3} ${text3}`;    
+})
+
+// Additional Preferences
+
+const addPref = document.querySelector('.search__addition-inner');
+const animArrow = document.getElementById('animArrow');
+
+const contPref = document.querySelector('.addition__container');
+contPref.setAttribute('style', 'visibility:hidden');
+
+addPref.addEventListener('click', function(){
+    const checkPref = contPref.getAttribute('style');
+    if (checkPref == 'visibility:hidden') {
+        contPref.setAttribute('style','visibility:visible');
+        animArrow.classList.add("transformed");
+    } else {
+        contPref.setAttribute('style','visibility:hidden');
+        animArrow.classList.remove("transformed");
     }
 })
