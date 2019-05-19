@@ -22,7 +22,8 @@ flatpickr.localize(Russian);
 
 const nativeElement = document.querySelector('#datepicker_wrap');
 
-let calendar = flatpickr(nativeElement, {  
+let calendar = flatpickr(nativeElement, {
+    disableMobile: true,
     wrap: true,
     dateFormat: "d m",  
     altInput: true,

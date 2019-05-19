@@ -23,6 +23,7 @@ if(data != null) {
 
 
 let calendar = flatpickr( ".search__input-date", {
+    disableMobile: true,
     mode: "range",    
     defaultDate: [`${date1}`, `${date2}`],
   dateFormat: "d m",  

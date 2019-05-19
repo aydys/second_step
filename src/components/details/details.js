@@ -22,7 +22,8 @@ if(data != null) {
     date2 = arrSplit[1];
 }
 
-let calendar = flatpickr(nativeElement, {  
+let calendar = flatpickr(nativeElement, {
+    disableMobile: true,  
   wrap: true,
   defaultDate: [`${date1}`, `${date2}`],
   dateFormat: "d m",  
