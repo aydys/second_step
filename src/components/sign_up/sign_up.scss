@@ -1,4 +1,12 @@
-.sign-up__form {    
+.sign__up {
+    position: relative;
+    height: auto;
+}
+.sign-up__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
     width: 380px;
     height: 646px;    
     padding: 40px 30px;
@@ -7,6 +15,20 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
+
+@media (max-width: 1025px) {
+    .sign-up__form {
+        position: static;
+        transform: none;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .sign-up__form {
+        width: 320px;
+    }
 }
 
 .sign__name, .sign__birth, .sign__entry-data, .sign__offer {

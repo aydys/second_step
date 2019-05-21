@@ -681,13 +681,37 @@ span.flatpickr-weekday {
   padding: 0 7px;
   text-align: center; }
 
+.sign__in {
+  position: relative; }
+
 .sign__bg {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 753px; }
+  height: 753px;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+@media (max-width: 1024px) {
+  .sign__bg {
+    height: 535px; } }
+
+@media (max-width: 768px) {
+  .sign__bg {
+    height: 400px; } }
+
+@media (max-width: 560px) {
+  .sign__bg {
+    height: 294px; } }
+
+@media (max-width: 360px) {
+  .sign__bg {
+    height: 189px; } }
 
 .sign-in__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 380px;
   height: 358px;
   padding: 40px 30px;
@@ -697,8 +721,25 @@ span.flatpickr-weekday {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px; }
 
+@media (max-width: 650px) {
+  .sign-in__form {
+    position: static;
+    transform: none;
+    margin: 0 auto; } }
+
+@media (max-width: 380px) {
+  .sign-in__form {
+    width: 320px; } }
+
 .sign__form-title {
-  margin: 0; }
+  margin: 0;
+  font-size: 24px;
+  color: #1F2041; }
+
+@media (max-width: 650px) {
+  .sign__form-title {
+    font-size: 19px;
+    color: #1F2041; } }
 
 .sign__input {
   margin-top: 20px;
@@ -720,7 +761,19 @@ span.flatpickr-weekday {
 .sign__invite-question {
   font-size: 14px; }
 
+@media (max-width: 380px) {
+  .sign__invite-question {
+    font-size: 12px; } }
+
+.sign__up {
+  position: relative;
+  height: auto; }
+
 .sign-up__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 380px;
   height: 646px;
   padding: 40px 30px;
@@ -729,6 +782,16 @@ span.flatpickr-weekday {
   box-sizing: border-box;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px; }
+
+@media (max-width: 1025px) {
+  .sign-up__form {
+    position: static;
+    transform: none;
+    margin: 0 auto; } }
+
+@media (max-width: 380px) {
+  .sign-up__form {
+    width: 320px; } }
 
 .sign__name, .sign__birth, .sign__entry-data, .sign__offer {
   margin-top: 20px; }
