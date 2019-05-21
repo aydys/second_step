@@ -3,19 +3,57 @@
     height: 830px;    
 }
 
+@media (max-width: 1110px) {
+    .landing {
+        height: 640px;    
+    }
+}
+
+@media (max-width: 768px) {
+    .landing {
+        height: 440px;    
+    }
+}
+
+@media (max-width: 420px) {
+    .landing {
+        height: auto;    
+    }
+}
+
 .landing__bg {
     position: absolute;
-    width: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    width: 100%;    
     height: 100%;
     z-index: -1;
     
     transition: ease-in-out 0.4s;
 }
 
+@media (max-width: 420px) {
+    .landing__bg {
+        position: static;
+        height: 240px;
+        background-size: contain;
+        margin: 0 auto;      
+    }
+}
+
 .landing__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .landing__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .landing__form {
@@ -30,11 +68,42 @@
     border-radius: 4px;
 }
 
+@media (max-width: 768px) {
+    .landing__form {
+        margin-top: 40px;        
+    }
+}
+
+@media (max-width: 420px) {
+    .landing__form {
+        margin-top: 10px;        
+    }
+}
+
+@media (max-width: 412px) {
+    .landing .wrap {
+        padding: 0;
+    }
+    .landing__form {
+        margin-top: 10px;
+        width: 100%;
+        height: auto;
+        padding: 20px;        
+    }
+}
+
+
 .landing__form-title {
     font-size: 24px;
     font-weight: bold;
     line-height: 30px;
     margin: 0;
+}
+
+@media (max-width: 420px) {
+    .landing__form-title {
+        font-size: 18px;
+    }
 }
 
 .landing__text {
@@ -47,6 +116,20 @@
     text-align: right;
     color: rgba(31, 32, 65, 0.75);
     line-height: 24px;    
+}
+
+@media (max-width: 768px) {
+    .landing__text {
+        text-align: left;
+        margin-top: 10px;
+        width: 100%;  
+    }
+}
+
+@media (max-width: 412px) {
+    .landing__text {
+        padding: 0 20px;  
+    }
 }
 
 // Flatpickr Style

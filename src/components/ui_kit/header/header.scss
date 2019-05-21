@@ -6,9 +6,48 @@
     grid-gap: 0 20px;
     align-items: center; 
 }
+
+@media (max-width: 1110px) {
+    .header {
+        grid-template-areas:    "logo login sign"
+                                "navigation navigation navigation";
+        grid-template-columns: 1fr 87px 163px;
+        
+        grid-gap: 10px 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+}
+
+@media (max-width: 545px) {
+    .header {        
+        grid-template-areas:    "logo logo"
+                                "navigation navigation"
+                                "login sign";
+        grid-template-columns: 1fr 1fr;
+        
+        
+        grid-gap: 10px 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+}
+
 .header-nav {
     grid-area: navigation;
     justify-self: end;
+}
+
+@media (max-width: 545px) {
+    .header-nav {
+        grid-area: navigation;
+        justify-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;        
+    }  
 }
 
 .header__login {
@@ -16,8 +55,22 @@
     justify-self: end;    
 }
 
+@media (max-width: 545px) {
+    .header__login {
+        grid-area: login;
+        justify-self: start;    
+    }
+}
+
 .header__sign {
     grid-area: sign;
+}
+
+@media (max-width: 545px) {
+    .header__sign {
+        grid-area: sign;
+        justify-self: end;
+    }
 }
 
 .header-nav__link {      

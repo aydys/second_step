@@ -4,6 +4,12 @@
     margin-top: 20px;
 }
 
+@media (max-width: 350px) {
+    .input-date__inner {
+        flex-direction: column;
+    }    
+}
+
 .input-date__label {
     font-weight: bold;
     font-size: 12px;
@@ -35,6 +41,13 @@
     height: 44px;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
+}
+
+@media (max-width: 350px) {
+    .input__date {
+        width: 100%;
+       
+    }  
 }
 
 .input__date::placeholder {

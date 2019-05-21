@@ -5,6 +5,15 @@
     align-items: center;
 }
 
+@media (max-width: 545px) {
+    .logo {
+        grid-area: logo;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+    }
+}
+
 .logo__name {
     margin-left: 12.5px;    
 }

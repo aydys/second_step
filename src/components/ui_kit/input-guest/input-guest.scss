@@ -5,6 +5,13 @@
     flex-direction: column;
 }
 
+.input-guest__label {
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
 .input-guest[readonly], .search__input-guest[readonly] {    
     padding-left: 10px;
     font-size: 14px;
