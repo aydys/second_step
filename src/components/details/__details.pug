@@ -1,26 +1,26 @@
 .details__gallery
-    img.details__gallery-img(src="img/main-room.jpg", alt="main-room")
-    .details__gallery-second
-        img.details__gallery-img(src="img/second-room.jpg", alt="second-room")
-        img.details__gallery-img(src="img/third-room.jpg", alt="third-room")
+    img.details__gallery-main(src="img/main-room.jpg", alt="main-room")
+    .details__gallery-secondary
+        img.details__gallery-second(src="img/second-room.jpg", alt="second-room")
+        img.details__gallery-third(src="img/third-room.jpg", alt="third-room")
 .details__content.wrap
     .details__main
         .details__info
             .details__label Сведения о номере
             .details__info-item
-                img.details__info-icon(src="img/smile.svg", width='48' alt="smile")                
+                img.details__info-icon(src="img/smile.svg" width='45' alt="smile")                
                 .details__info-content
                     .details__inner-label Комфорт
                     .details__text Шумопоглощающие стены
             .details__line
             .details__info-item
-                img.details__info-icon(src="img/flat.svg", alt="flat")                
+                img.details__info-icon(src="img/flat.svg" width='45' alt="flat")                
                 .details__info-content
                     .details__inner-label Удобство
                     .details__text Окно в каждой из спален
             .details__line
             .details__info-item
-                img.details__info-icon(src="img/fire.svg", alt="fire")
+                img.details__info-icon(src="img/fire.svg" width='45' alt="fire")
                 .details__info-content
                     .details__inner-label Уют
                     .details__text Номер оснащён камином
@@ -40,7 +40,9 @@
                     .details__emotion-item.details__emotion-item_violet Удовлетворительно
                     .details__emotion-item.details__emotion-item_black Разочарован
         .details__review
-            .details__label Отзывы посетителей номера
+            .details__label-container
+                .details__label Отзывы посетителей номера
+                .details__label-desc 2 отзыва 
             .details__review-item
                 .details__review-pic
                     .details__review-avatar(style="background-image: url('img/avatar1.png')")                    
