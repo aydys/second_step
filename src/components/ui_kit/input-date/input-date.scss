@@ -45,9 +45,11 @@
 
 @media (max-width: 350px) {
     .input__date {
-        width: 100%;
-       
-    }  
+        width: 100%;       
+    }
+    .input-date__label_mobile {
+        margin-top: 10px;
+    }
 }
 
 .input__date::placeholder {
