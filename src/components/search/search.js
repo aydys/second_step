@@ -512,15 +512,15 @@ const addPref = document.querySelector('.search__addition-inner');
 const animArrow = document.getElementById('animArrow');
 
 const contPref = document.querySelector('.addition__container');
-contPref.setAttribute('style', 'visibility:hidden');
+contPref.setAttribute('style', 'display: none');
 
 addPref.addEventListener('click', function(){
     const checkPref = contPref.getAttribute('style');
-    if (checkPref == 'visibility:hidden') {
-        contPref.setAttribute('style','visibility:visible');
+    if (checkPref == 'display: none') {
+        contPref.setAttribute('style','display: block');
         animArrow.classList.add("transformed");
     } else {
-        contPref.setAttribute('style','visibility:hidden');
+        contPref.setAttribute('style', 'display: none');
         animArrow.classList.remove("transformed");
     }
 })
