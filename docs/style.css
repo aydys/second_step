@@ -962,9 +962,10 @@ input:checked + .slider:before {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 266px;
-    width: auto; }
+    width: auto;
+    margin-right: 0; }
   .search__aside > div {
-    width: 240px;
+    width: 266px;
     margin-right: 10px; } }
 
 .search__form {
