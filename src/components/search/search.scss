@@ -33,6 +33,12 @@
     }
 }
 
+@media (max-width: 635px) {
+    .search__aside > div {
+        margin-right: 0;
+    }
+}
+
 .search__form {    
     position: relative;
     margin-top: 20px;
